@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        blueColor: '#31A5AC',
+                        bgBColor: '#F8F8F8',
+                        inputBColor: '#DCDCDC'
+                    },
+                    fontFamily: {
+                        montserrat: ["Montserrat", "sans-serif"],
+                        roboto: ["Roboto", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <section class="mt-9">
+            <h1 class="text-blueColor text-3xl md:text-5xl text-center font-bold font-montserrat">Money Master💰</h1>
+        </section>
+
+    </header>
+
+    <main class="font-roboto">
+        <section class="md:w-[80%] md:mx-auto mt-9">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8">
+                <div>
+                    <img class="w-full h-auto" src="images/money.png" alt="">
+                </div>
+                <div class="bg-bgBColor">
+                    <div class="w-[90%] md:w-[50%] mx-auto">
+                        <div class="mt-6">
+                            <h3 class="text-xl text-center font-medium mb-2">Income</h3>
+                            <div class="text-base font-normal">
+                                <p>Income:</p>
+                                <input id="income-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h3 class="text-xl text-center font-medium mb-2">Expenses</h3>
+                            <div class="text-base font-normal">
+                                <p>Food:</p>
+                                <input id="food-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
+                                <p>Rent:</p>
+                                <input id="rent-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
+                                <p>Clothes:</p>
+                                <input id="clothes-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
+                                <div class="text-center mt-4">
+                                    <button id="calculate-btn" class="text-white bg-blueColor py-3 px-14 rounded-sm border-2 border-blueColor hover:bg-white hover:text-black mb-2">Calculate</button>
+                                    <h3 class="text-xl text-center font-medium">Total Expenses: <span id="total-expenses-field"></span></h3>
+                                    <h3 class="text-xl text-center font-medium">Balance: <span id="balance-field"></span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[90%] md:w-[80%] mx-auto">
+                        <div class="mt-7">
+                            <div class="flex space-x-4">
+                                <p class="py-3">Save: </p>
+                                <input id="saving-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
+                                <p class="py-3">%</p>
+                                <button id="save-btn" class="text-white bg-blueColor py-3 px-7 rounded-sm border-2 border-blueColor hover:bg-white hover:text-black">Save</button>
+                            </div>
+                            <h3 class="text-xl text-center font-medium mt-2">Saving Amount: <span id="saving-amount-field"></span></h3>
+                            <h3 class="text-xl text-center font-medium mb-4">Remaining Balance: <span id="remaining-balance-field"></span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
