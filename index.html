@@ -49,8 +49,8 @@
                     <div class="w-[90%] md:w-[50%] mx-auto">
                         <div class="mt-6">
                             <h3 class="text-xl text-center font-medium mb-2">Income</h3>
-                            <div class="text-base font-normal">
-                                <p>Income:</p>
+                            <div class="flex text-base font-normal">
+                                <p class="w-32 py-2">Income:</p>
                                 <input id="income-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
                             </div>
                         </div>
@@ -58,12 +58,18 @@
                         <div class="mt-8">
                             <h3 class="text-xl text-center font-medium mb-2">Expenses</h3>
                             <div class="text-base font-normal">
-                                <p>Food:</p>
-                                <input id="food-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
-                                <p>Rent:</p>
-                                <input id="rent-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
-                                <p>Clothes:</p>
-                                <input id="clothes-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
+                                <div class="flex mb-2">
+                                    <p class="w-32 py-2">Food:</p>
+                                    <input id="food-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
+                                </div>
+                                <div class="flex mb-2">
+                                    <p class="w-32 py-2">Rent:</p>
+                                    <input id="rent-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
+                                </div>
+                                <div class="flex">
+                                    <p class="w-32 py-2">Clothes:</p>
+                                    <input id="clothes-input-field" class="bg-inputBColor rounded-sm py-2 pl-4 w-full" type="text">
+                                </div>
                                 <div class="text-center mt-4">
                                     <button id="calculate-btn" class="text-white bg-blueColor py-3 px-14 rounded-sm border-2 border-blueColor hover:bg-white hover:text-black mb-2">Calculate</button>
                                     <h3 class="text-xl text-center font-medium">Total Expenses: <span id="total-expenses-field"></span></h3>
